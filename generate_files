@@ -1,8 +1,7 @@
-head -c 0 </dev/urandom >0B_001.test
-head -c 1 </dev/urandom >1B_001.test
-
-for size in 1K 10K 100K 1M 10M 100M; do
+for size in 0 1 1K 10K 100K 1M 10M 100M; do
   for i in 1 2; do
-    head -c $size </dev/urandom >${size}B_00${i}
+    filename=${size}B_00${i}
+    head -c $size </dev/urandom >$filename
+    cp $filename encp_test_for_enstore/test_files_for_enstore/$filename
   done
 done

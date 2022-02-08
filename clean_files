@@ -1,0 +1,4 @@
+rm 0*B*
+rm 1*B*
+rm encp_test_for_enstore/test_files_for_enstore/0*B*
+rm encp_test_for_enstore/test_files_for_enstore/1*B*
