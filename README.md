@@ -1,3 +1,8 @@
-I think most of these files are just random data, we could probably replace most of the bytes here with a script to generate the necessary files.
+This is intended for use with the encp_test_script_no_dcache script which ships along with Enstore, found at: https://github.com/Enstore-org/enstore/blob/develop/tools/encp_test_script_no_dcache
 
-This is done - run ./generate_files to create the needed test files, and ./clean_files to delete them. They're all in .gitignore
+To use this repo on an enstore machine:
+
+1. Copy or symlink $ENSTORE_DIR/tools/encp_test_script_no_dcache to this root directory
+1. Run ./generate_files to create the needed test files
+1. Run the encp_test_script_no_dcache script
+1. Use ./clean_files to delete the test files
