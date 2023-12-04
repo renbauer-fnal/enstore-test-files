@@ -1,7 +1,7 @@
 for size in 0 1 1K 10K 100K 1M 10M 100M; do
   for i in 1 2; do
     filename=${size}B_00${i}
-    head -c $size </dev/urandom >$filename
+    dd bs=$size count=1 if=/dev/urandom of=$filename
     cp $filename encp_test_for_enstore/test_files_for_enstore/$filename
   done
 done
